@@ -1,0 +1,56 @@
+{% extends 'sheltownstafflogin/StaffLoginBase.html' %}
+
+{% block title %}Rental Properties Listed{% endblock title %}
+
+{% block body %}
+
+    <nav class="breadcrump-1" aria-label="breadcrumb">
+        <ol class="breadcrumb my-0">
+        <li class="breadcrumb-item"><a href="/stafflogin">Home</a></li>
+        <li class="breadcrumb-item active"><a href="/stafflogin/staff/listing">Rental Properties Listed</a></li>
+        </ol>
+    </nav>
+
+	<nav class="navbar nav-2" style="box-shadow:none">
+	  <a class="navbar-brand">Select Property to change</a>
+	  <form class="form-inlinn">
+        <a href="#" class="btn btn-outline-secondary btn-md"><i class="fa fa-download"></i><span> Download Details</span></a>
+	    <a href="/stafflogin/staff/addproperty" class="btn btn-outline-success btn-md"><i class="fa fa-plus"></i><span> Add New Property</span></a>
+	  </form>
+	</nav>
+
+<div class="py-3 px-3 my-lg-3 border table-responsive">
+<table id="dtBasicExample" class="table " width="100%">
+    <thead>
+        <tr>
+            <th class="th-sm">Name
+            </th>
+            <th class="th-sm">Property Owner
+            </th>
+            <th class="th-sm">Status
+            </th>
+            <th class="th-sm">Property Type
+            </th>
+            <th class="th-sm">Date Created
+            </th>
+            <th class="th-sm">Images
+            </th>
+            <th class="th-sm">Locality
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for item in property %}
+        <tr>
+            <td>{{ item. }}</td>
+            <td>{{ item. }}</td>
+            <td>{{ item. }}</td>
+            <td>{{ item. }}</td>
+            <td><a href="/stafflogin/staff/{{item.id}}/editproperty"><button class="btn btn-warning btn-sm"><i class="fa fa-pen"></i> Edit</button></a></td>
+            <td><a href="/stafflogin/staff/{{item.id}}/deleteproperty"><button class="btn btn-danger btn-sm"><i class="fa fa-times"></i> Delete</button></a></td>
+        </tr>
+    {% endfor %} 
+    </tbody>
+</table>
+</div>
+{% endblock body%}

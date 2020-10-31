@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {% block title %}{% endblock title %} | SHELTOWN</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <link href="{% static 'stafflogin/css/style.css' %}" rel="stylesheet">
+    {% block head %} {% endblock  %} 
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+
+    <script>$(document).ready(function () {
+        $('#dtBasicExample').DataTable();
+        $('.dataTables_length').addClass('bs-select');
+    });</script>
+
+
+</head>
+<body>
+
+	<!-- As a heading -->
+	<nav class="navbar bg-default py-3">
+	  <a class="navbar-brand font-weight-bold" href="/stafflogin">SHELTOWN-STAFF</a>
+	  <form class="form-inline log">
+		  <a>WELCOME,<span class="ml-1" style="  font-weight: 600; ">
+      {% if user.is_authenticated %}
+      <span style="text-transform: uppercase;">{{ user.username }}</span>
+      {% else %}
+      <span>Not found</span>
+      {% endif %}
+      </a>
+	    <a href="/admin" style="margin-right: 5px; margin-left: 15px; text-decoration: underline!important;"> GO TO ADMIN</a>
+	    <span> / </span>
+      <a href="/" style="margin-right: 5px; margin-left: 15px; text-decoration: underline!important;"> VIEW SITE</a>
+      <span> / </span>
+	    <a href="/stafflogin/logout" style="text-decoration: underline!important; margin-left: 5px; "> LOG OUT</a>
+	  </form>
+	</nav>
+
+{% block body %} {% endblock body %}
+</div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+
+{% extends 'sheltownstafflogin/StaffLoginBase.html' %}
+{% load static %}
+{% block title %}StaffLogin{% endblock title %}
+{% block head %}
+<style>
+
+</style>
+{% endblock head %}
+
+{% block body %}
+<div class="jumbotron m-3 blue-grey lighten-5">
+	<div class="indigo-text text-center font-weight-bold ">
+	<span class="display-4">SITE INFORMATION</span>
+	<hr class="">
+	</div>
+	<section class="sec-1 py-5">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-lg-4 mb-4">
+					<div class="card hoverable">
+						<div class="title">
+							<h4><a href="/stafflogin/staff/listing">Rental Properties Listed</a></h4>
+						</div>
+						<div class="but">
+							<div class="left-but">
+								<a href="/stafflogin/staff/addproperty" class="btn btn-outline btn-md"><i class="fas fa-plus"></i> Add</a>
+							</div>
+							<div class="right-but">
+								<a href="/stafflogin/staff/listing" class="btn btn-outline btn-md"><i class="fas fa-pen"></i> Change</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-12 col-lg-4 mb-4">
+					<div class="card hoverable">
+						<div class="title">
+							<h4><a href="/stafflogin/staff/owner">Rental Properties Owners</a></h4>
+						</div>
+						<div class="but">
+							<div class="left-but">
+								<a href="/stafflogin/staff/addpropertyowner" class="btn btn-outline btn-md"><i class="fas fa-plus"></i> Add</a>
+							</div>
+							<div class="right-but">
+								<a href="/stafflogin/staff/owner" class="btn btn-outline btn-md"><i class="fas fa-pen"></i> Change</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-12 col-lg-4 mb-4">
+					<div class="card hoverable">
+						<div class="title">
+							<h4><a href="/stafflogin/staff/user" >User Registered</a></h4>
+						</div>
+						<div class="but">
+							<div class="left-but">
+								<a href="/stafflogin/staff/adduser" class="btn btn-outline btn-md"><i class="fas fa-plus"></i> Add</a>
+							</div>
+							<div class="right-but">
+								<a href="/stafflogin/staff/user" class="btn btn-outline btn-md"><i class="fas fa-pen"></i> Change</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+
+{% endblock body%}
+
+

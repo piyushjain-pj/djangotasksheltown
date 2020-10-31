@@ -1,0 +1,37 @@
+{% extends 'sheltownstafflogin/StaffLoginBase.html' %}
+{% load static %}
+{% block title %}Add Property {% endblock title %}
+{% block body %}
+
+
+
+    <nav class="breadcrump-1" aria-label="breadcrumb">
+        <ol class="breadcrumb my-0">
+        <li class="breadcrumb-item"><a href="/stafflogin">HOME</a></li>
+        <li class="breadcrumb-item active"><a href="/stafflogin/staff/owner">ALL USERS</a></li>
+        <li class="breadcrumb-item active"><span>ADD NEW USER</span></li>        
+        </ol>
+    </nav>
+
+	<nav class="navbar nav-2" style="box-shadow:none">
+	  <a class="navbar-brand">ADD NEW USER</a>
+	</nav>
+
+<!-- Content -->
+<div id="content" class="colM">
+<h1>Add user</h1>
+<div id="content-main">
+<br class="clear">
+</div>
+</div>
+<div class="w-50" style="margin: 0 auto;">
+{% load crispy_forms_tags %}
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <p class="display-4">Add Property Form is Not Available</p>
+    <input type="submit" value='submit'>
+</form>
+</div>
+<!-- END Container -->
+{% endblock body %}

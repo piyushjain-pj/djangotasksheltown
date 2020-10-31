@@ -1,0 +1,111 @@
+nav{
+	color: #fff;
+}
+
+nav a{
+	color: white;
+}
+
+nav .navbar-brand{
+	cursor: pointer;
+	text-decoration: none;
+	font-style: none;
+}
+
+nav .navbar-brand:hover{
+	color: white;
+}
+.breadcrump-1 a{
+	color: black;
+}
+.breadcrump-1 a:hover{
+	color: black;
+	font-weight: 400;
+}
+.log a{
+	font-size: 14px;
+}
+nav .log a:hover{
+	color: orange;
+}
+.title a{
+	color:rgb(91, 91, 217)!important;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 20px;
+	font-weight: 600;
+
+
+}
+.title a:hover{
+	font-size: 22px!important;
+	text-decoration: underline!important;
+
+
+}
+.card{
+    font-weight: 400;
+    border: 0;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12)!important;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12)!important;
+}
+.sec-1 .card{
+	display: block;
+	margin: auto;
+	border: 2px solid #fff;
+}
+
+.sec-1 .card .title{
+	text-align: center;
+	margin-top: 5%;
+}
+
+.sec-1 .card .but{
+	display: flex;
+	flex-direction: row;
+	width: 90%;
+	margin: auto;margin-top: 10%;
+	margin-bottom: 10%;
+}
+
+.sec-1 .card .but .left-but{
+	flex: 1;
+}
+
+.sec-1 .card .but .left-but a{
+	color: black;
+	font-weight: 500;
+	border: 2px solid rgb(192, 191, 191);
+	border-radius: 20px;
+	outline: none;
+	background-color: transparent;
+	transition: 0.2s;
+}
+
+.sec-1 .card .but .left-but a:hover{
+	color: blue;
+	border-color: blue;
+	font-weight: 600;
+}
+
+.nav-2 a{
+	color: gray!important;
+}
+
+.sec-1 .card .but .right-but a{
+	font-weight: 500;
+	border: 2px solid rgb(192, 191, 191);
+	border-radius: 20px;
+	outline: none;
+	background-color: transparent;
+	transition: 0.1s;
+}
+
+.sec-1 .card .but .right-but a:hover{
+	color: green;
+	border-color: green;
+	font-weight: 600;
+}
+
+
+/********************************************/
+

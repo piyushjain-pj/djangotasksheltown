@@ -1,0 +1,31 @@
+{% extends 'sheltownstafflogin/StaffLoginBase.html' %}
+{% load static %}
+{% block title %}Change Property {% endblock title %}
+{% block body %}
+    <nav class="breadcrump-1" aria-label="breadcrumb">
+        <ol class="breadcrumb my-0">
+            <li class="breadcrumb-item"><a href="/stafflogin">HOME</a></li>
+            <li class="breadcrumb-item "><a href="/stafflogin/staff/listing">ALL Property Listed</a></li>
+            <li class="breadcrumb-item active"><span>Change</span></li>
+        </ol>
+    </nav>
+    <nav class="navbar nav-2 grey lighten-4" style="box-shadow:none">
+        <span class="h5-responsive text-dark">Change Property</span>
+        <form class="form-inlinn">
+	    <a href="/stafflogin/addproperty" class="btn btn-outline-info btn-md"><i class="fa fa-plus"></i><span> Add New Property</span></a>
+	    </form>
+    </nav>
+    
+    <div class="form-custom" style="margin:50px 30px;">
+        {% load crispy_forms_tags %}
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <p class="display-4">Edit Property Form is Not Available</p>
+            <br>
+            <hr class="py-2">
+            <input type="submit" class="btn btn-block btn-lg py-2 px-5 btn-warning" value='Save Changes'>
+        </form>
+    </div>
+    <!-- END Container -->
+    {% endblock body %}

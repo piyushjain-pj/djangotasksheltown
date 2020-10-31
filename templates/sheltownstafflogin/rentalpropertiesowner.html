@@ -1,0 +1,58 @@
+{% extends 'sheltownstafflogin/StaffLoginBase.html' %}
+
+{% block title %}Rental Properties Owners Details{% endblock title %}
+
+{% block body %}
+    <nav class="breadcrump-1" aria-label="breadcrumb">
+        <ol class="breadcrumb my-0">
+        <li class="breadcrumb-item"><a href="/stafflogin/">Home</a></li>
+        <li class="breadcrumb-item active"><a href="/stafflogin/staff/owner">Rental Properties Owner</a></li>
+        </ol>
+    </nav>
+
+	<nav class="navbar nav-2" style="box-shadow:none">
+	  <a class="navbar-brand">Select Owner to change</a>
+	  <form class="form-inlinn">
+        <a href="#" class="btn btn-outline-secondary btn-md"><i class="fa fa-download"></i><span> Download Details</span></a>
+	    <a href="/stafflogin/staff/addpropertyowner" class="btn btn-outline-success btn-md"><i class="fa fa-plus"></i><span> Add New Owner</span></a>
+	  </form>
+	</nav>
+
+<div class="px-3 my-3">
+<table id="dtBasicExample" class="table border" width="100%">
+    <thead>
+        <tr>
+            <th class="th-sm">Property Owner
+            </th>
+            <th class="th-sm">WhatsApp Number
+            </th>
+            <th class="th-sm">Bank Account Number
+            </th>
+            <th class="th-sm">Cancellend Cheque
+            </th>
+            <th class="th-sm">Edit
+            </th>
+            <th class="th-sm">Delete
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+
+
+    {% for item in data %}
+        <tr>
+            <td>{{ item.user_profile }}</td>
+            <td>{{ item.whatsapp_number }}</td>
+            <td>{{ item.bank_account_number }}</td>
+            <td>{{ item.cancelled_cheque }}</td>
+            <td><a href="/stafflogin/staff/{{item.id}}/editowner"><button class="btn btn-warning btn-sm"><i class="fa fa-pen"></i> Edit</button></a></td>
+            <td><a href="/stafflogin/staff/{{item.id}}/deleteowner"><button class="btn btn-danger btn-sm"><i class="fa fa-times"></i> Delete</button></a></td>
+        </tr>
+    {% endfor %} 
+
+    
+    </tbody>
+</table>
+</div>
+{% endblock body%}
+
