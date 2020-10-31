@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'sheltown.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-
+'''POSTGRESQL DATABASE I AM Comment it just for free hosting
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -88,6 +88,17 @@ DATABASES = {
 
     }
 }
+'''
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
+
+
 
 
 # Password validation
